@@ -3,31 +3,103 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CSS Review</title>
-  <link rel="stylesheet" href="reset.css">
+  <title>Wed-Design-Challenge</title>
   <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+  <!-- Start of navbar -->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Latitude</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="comparison.html">Comparison</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Plots
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="max_temp.html">Max Temperature</a>
+          <a class="dropdown-item" href="humidity.html">Humidity</a>
+          <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+          <a class="dropdown-item" href="windspeed.html">Windspeed</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- End of navbar -->
+ 
+</br>
+  
+  <header class="header">
+    <h1 class="text-primary">Summary: Latitude vs X</h1>
+  </header>
+
+  <img src="Resources/assets/images/Fig1.png" class="float-left" style="width:33.3%">
 
   <div class="container">
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Portfolio</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <header class="header">
-      <h1>Welcome</h1>
-    </header>
-    <main>
+    <div class="row"> 
+      <div class="col-md-6">
+        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+        <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanation and descriptions of any trends and correlations witnessed.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- this section creates the visualization plots-->
+
+<div class="col-lg-5 col-md-12">
+  <div class="visplot-content">
+    <h2 class="text-primary">Visualizations</h2>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-4">
+          <a href="max_temp.html"><img src="Resources/assets/images/Fig1.png" width="100%"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" width="100%"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" width="100%"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" width="100%"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
